@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>City Library</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<link rel="stylesheet" href="NewFile.css">
+<script type="text/javascript">
+function show1(show,hide){
+	  document.getElementById(show).style.display = 'block';
+	  document.getElementById(hide).style.display ='none';
+	}	
+</script>
+</head>
+<body>
+
+<header>
+<h1>Welcome to City Library</h1>
+</header>
+
+<div>
+<h2>Choose User Profile</h2>
+<form action="Main" method="post">
+
+<input type="radio" name="r1" value="1" id="r1" required="required" onclick="show1('div1','div2')"><label for="r1">Reader</label><br>
+<div id="div1" class="hide">
+<label for="readerid">Reader ID : </label>
+<input type="text" name="readerid" id="readerid" placeholder="Enter Reader Id">
+</div>
+
+<input type="radio" name="r1" value="2" id="r2" required="required" onclick="show1('div2','div1')"><label for="r2">Administrator</label><br>
+<div id="div2" class="hide">
+<Label for="adminId">Admin Id:</Label>
+<input type="text" name="adminId" id="adminId" placeholder="Admin ID"><br><br>
+<Label for="password">Password:</Label>
+<input type="text" name="password" id="password" placeholder="Password"><br><br>
+</div>
+
+<br>
+<input type="submit" value="Submit">
+<br><br>
+
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>City Library</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<link rel="stylesheet" href="NewFile.css">
+<script type="text/javascript">
+function show1(show,hide1,hide2,hide3,hide4,hide5,hide6,hide7){
+	  document.getElementById(show).style.display = 'block';
+	  document.getElementById(hide1).style.display = 'none';
+	  document.getElementById(hide2).style.display = 'none';
+	  document.getElementById(hide3).style.display = 'none';
+	  document.getElementById(hide4).style.display = 'none';
+	  document.getElementById(hide5).style.display = 'none';
+	  document.getElementById(hide6).style.display = 'none';
+	  document.getElementById(hide7).style.display = 'none';
+	}	
+</script>
+</head>
+<body>
+<header>
+<h1>Welcome to City Library</h1>
+</header>
+
+<div>
+<form action="Main.html" method="post">
+<input type="submit" value="Home" >
+</form>
+</div>
+<div>
+<form action="Main5" method="post">
+<label for="semester">Administrator Menu : </label><br>
+<input type="radio" name="r2" value="adddoc" id="r8" required="required" onclick="show1('div1','div2','div3','div4','div5','div6','div7','div8')"><label for="r8">Add Document</label><br>
+<input type="radio" name="r2" value="status" id="r9" required="required" onclick="show1('div8','div2','div1','div3','div4','div5','div6','div7')"><label for="r9">Search document copy and check its status</label><br>
+<input type="radio" name="r2" value="addreader" id="r10" required="required" onclick="show1('div6','div2','div1','div3','div4','div5','div7','div8')"><label for="r10">Add new reader</label><br>
+<input type="radio" name="r2" value="printbranch" id="r11" required="required" onclick="show1('div7','div2','div1','div3','div4','div5','div6','div8')"><label for="r11">Print branch info</label><br>
+<input type="radio" name="r2" value="mfbb" id="r12" required="required" onclick="show1('div2','div1','div3','div4','div5','div6','div7','div8')"><label for="r12">Most frequent borrowers in branch</label><br>
+<input type="radio" name="r2" value="mfbl" id="r13" required="required" onclick="show1('div3','div1','div2','div4','div5','div6','div7','div8')"><label for="r13">Most frequent borrowers in library</label><br>
+<input type="radio" name="r2" value="mbb" id="r14" required="required" onclick="show1('div2','div1','div3','div4','div5','div6','div7','div8')"><label for="r14">Most borrowed books in branch</label><br>
+<input type="radio" name="r2" value="mbl" id="r15" required="required" onclick="show1('div3','div1','div2','div4','div5','div6','div7','div8')"><label for="r15">Most borrowed books in library</label><br>
+<input type="radio" name="r2" value="top10" id="r16" required="required" onclick="show1('div4','div2','div1','div3','div5','div6','div7','div8')"><label for="r16">10 most popular books of the year in the library</label><br>
+<input type="radio" name="r2" value="avgfine" id="r17" required="required" onclick="show1('div5','div2','div1','div3','div4','div6','div7','div8')"><label for="r17">Average fine paid by the borrowers</label><br>
+
+
+<div id="div1" class="hide">
+<table>
+<tr>
+<th>Document ID</th>
+<td>
+<input type="text" name="docid" id="docid" placeholder="Enter Document Id">
+</td>
+<tr>
+<th>Copy Number</th>
+<td>
+<input type="text" name="copy" id="copy" placeholder="Enter Copy Number">
+</td>
+<tr>
+<th>Branch ID</th>
+<td>
+<input type="text" name="branchid" id="branchid" placeholder="Enter Branch Id">
+</td>
+</tr>
+<tr>
+<th>Position</th>
+<td>
+<input type="text" name="position" id="position" placeholder="Enter Position">
+</td>
+</tr>
+</table>
+</div>
+
+<div id="div2" class="hide">
+<table>
+<tr>
+<th>Number</th>
+<td><input type="text" name="num" id="num" placeholder="Enter Number"></td>
+</tr>
+<tr>
+<th>Branch Number</th>
+<td><input type="text" name="branchnum" id="branchnum" placeholder="Enter Branch Number"></td>
+</tr>
+</table>
+</div>
+
+<div id="div3" class="hide">
+<table>
+<tr>
+<th>Number</th>
+<td><input type="text" name="num2" id="num" placeholder="Enter Number"></td>
+</tr>
+</table>
+</div>
+
+<div id="div4" class="hide">
+<table>
+<tr>
+<th>Year</th>
+<td><input type="text" name="year" id="num" placeholder="Enter Year"></td>
+</tr>
+</table>
+</div>
+
+<div id="div5" class="hide">
+<table>
+<tr>
+<th>Start Date</th>
+<td><input type="date" name="date1" id="date1" placeholder="Enter Start Date"></td>
+</tr>
+<tr>
+<th>End Date</th>
+<td><input type="date" name="date2" id="date2" placeholder="Enter End Date"></td>
+</tr>
+</table>
+</div>
+
+<div id="div6" class="hide">
+<table>
+<tr>
+<th>Reader Name</th>
+<td><input type="text" name="rname" id="rname" placeholder="Enter Name of the Reader"></td>
+</tr>
+<tr>
+<th>Reader Type</th>
+<td><input type="text" name="rtype" id="rtype" placeholder="Enter Type of the Reader"></td>
+</tr>
+<tr>
+<th>Reader Address</th>
+<td><input type="text" name="radd" id="radd" placeholder="Enter Address of the Reader"></td>
+</tr>
+<tr>
+<th>Reader Contact</th>
+<td><input type="text" name="rcon" id="rcon" placeholder="Enter Contact of the Reader"></td>
+</tr>
+</table>
+</div>
+
+<div id="div7" class="hide">
+<table>
+<tr>
+<th>Branch ID</th>
+<td><input type="text" name="bid" id="bid" placeholder="Enter Branch ID"></td>
+</tr>
+</table>
+</div>
+
+<div id="div8" class="hide">
+<table>
+<tr>
+<th>Document ID</th>
+<td><input type="text" name="did" id="did" placeholder="Enter Document ID"></td>
+</tr>
+</table>
+</div>
+
+<input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

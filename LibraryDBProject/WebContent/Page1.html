@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>City Library</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<link rel="stylesheet" href="NewFile.css">
+<script type="text/javascript">
+function show1(show,hide1,hide2,hide3,hide4){
+	  document.getElementById(show).style.display = 'block';
+	  document.getElementById(hide1).style.display = 'none';
+	  document.getElementById(hide2).style.display = 'none';
+	  document.getElementById(hide3).style.display = 'none';
+	  document.getElementById(hide4).style.display = 'none';
+	}	
+</script>
+</head>
+<body>
+<header>
+<h1>Welcome to City Library</h1>
+</header>
+
+<div>
+<form action="Main.html" method="post">
+<input type="submit" value="Home" >
+</form>
+</div>
+<div>
+<form action="Main3" method="post">
+<label for="semester">Reader Menu : </label><br>
+<input type="radio" name="r2" value="search" id="r3" required="required" onclick="show1('div1','div2','div3','div4','div5')"><label for="r3">Search Document</label><br>
+<input type="radio" name="r2" value="reserve" id="r4" required="required" onclick="show1('div2','div1','div3','div4','div5')"><label for="r4">Reserve Document</label><br>
+<input type="radio" name="r2" value="checkout" id="r5" required="required" onclick="show1('div2','div1','div3','div4','div5')"><label for="r5">Document checkout</label><br>
+<input type="radio" name="r2" value="computefine" id="r6" required="required" onclick="show1('div2','div1','div3','div4','div5')"><label for="r6">Compute fine</label><br>
+<input type="radio" name="r2" value="return" id="r7" required="required" onclick="show1('div4','div2','div1','div3','div5')"><label for="r7">Return Document</label><br>
+<input type="radio" name="r2" value="listdoc" id="r8" required="required" onclick="show1('div2','div1','div3','div4','div5')"><label for="r8">List of documents reserved by a reader and their status</label><br>
+<input type="radio" name="r2" value="searchdocbypub" id="r9" required="required" onclick="show1('div5','div2','div1','div3','div4')"><label for="r9">Search Document By Publisher</label><br>
+
+<div id="div1" class="hide">
+<table>
+<tr><td>
+<label for="docid">Document ID : </label>
+</td>
+<td>
+<input type="text" name="docid" id="docid" placeholder="Enter Document Id">
+</td>
+<tr>
+<td>
+<label for="title">Title : </label>
+</td>
+<td>
+<input type="text" name="title" id="title" placeholder="Enter Document Title">
+</td>
+<tr>
+<td>
+<label for="title">Publisher Name : </label>
+</td>
+<td>
+<input type="text" name="pubname" id="pubname" placeholder="Enter Publisher Name ">
+</td>
+</tr>
+</table>
+</div>
+
+<div id="div2" class="hide">
+<h3>Click on submit </h3>
+</div>
+
+<div id="div3" class="hide">
+<label for="docid">Document ID : </label>
+<input type="text" name="docid" id="docid" placeholder="Enter Document Id">
+</div>
+
+<div id="div4" class="hide">
+<label for="branchid">Branch ID : </label>
+<input type="text" name="branchid" id="branchid" placeholder="Enter Branch Id">
+</div>
+
+<div id="div5" class="hide">
+<table>
+<tr>
+<td>
+<label for="title">Publisher Name : </label>
+</td>
+<td>
+<input type="text" name="pname" id="pname" placeholder="Enter Publisher Name ">
+</td>
+</tr>
+</table>
+</div>
+
+<input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>
